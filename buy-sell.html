@@ -21,9 +21,7 @@
 <main>
   <h2>Buy & Sell Products</h2>
 
-  <div class="featured-grid" id="product-list">
-    <!-- Products will be loaded here -->
-  </div>
+  <div class="featured-grid" id="product-list"></div>
 
   <h2>Your Cart</h2>
   <div id="cart">
@@ -31,6 +29,9 @@
   </div>
 
   <button id="checkoutBtn" class="btn">Generate Receipt & Pay via Mpesa</button>
+
+  <h2>Seller Locations</h2>
+  <div id="map" style="width:100%;height:300px;"></div>
 </main>
 
 <footer>
@@ -90,42 +91,28 @@
     cart.splice(index,1);
     renderCart();
   }
-document.getElementById('checkoutBtn').addEventListener('click', ()=>{
-  if(cart.length===0){
-    alert('Cart is empty!');
-    return;
-  }
 
-  let total = cart.reduce((sum,item)=>sum+item.price,0);
-
-  let receipt = 'Receipt:\n\n';
-  cart.forEach(item=>{
-    receipt += `${item.name} - Ksh ${item.price}\n`;
-  });
-  receipt += `\nTotal: Ksh ${total}\n\nProceed to pay via Mpesa.`;
-
-  // Simulate Mpesa payment
-  if(confirm(receipt + "\n\nClick OK to simulate Mpesa payment")) {
-    alert("Mpesa payment request sent to 0768814953. Thank you for your purchase!");
-    cart = []; // clear cart after payment
-    renderCart(); // refresh cart display
-  }
-});
-
+  document.getElementById('checkoutBtn').addEventListener('click', ()=>{
+    if(cart.length===0){
+      alert('Cart is empty!');
+      return;
     }
     let total = cart.reduce((sum,item)=>sum+item.price,0);
     let receipt = 'Receipt:\n\n';
     cart.forEach(item=>{receipt+=`${item.name} - Ksh ${item.price}\n`;});
-    receipt += `\nTotal: Ksh ${total}\n\nPay via Mpesa using number: 0768814953`;
+    receipt += `\nTotal: Ksh ${total}\n\nProceed to pay via Mpesa.`;
 
-    alert(receipt);
+    if(confirm(receipt + "\n\nClick OK to simulate Mpesa payment")) {
+      alert("Mpesa payment request sent to 0768814953. Thank you for your purchase!");
+      cart = [];
+      renderCart();
+    }
   });
 
   renderProducts();
-  renderCart();<h2>Seller Locations</h2>
-<div id="map" style="width:100%;height:300px;"></div>
+  renderCart();
 
-<script>
+  // Google Maps
   function initMap() {
     const locations = [
       {lat: -1.286389, lng: 36.817223, name: "Jei Ke Shop 1"},
@@ -146,6 +133,5 @@ document.getElementById('checkoutBtn').addEventListener('click', ()=>{
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 
-</script>
 </body>
 </html>
