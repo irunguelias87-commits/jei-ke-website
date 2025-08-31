@@ -74,10 +74,7 @@ const products = [
   const cartDiv = document.getElementById('cart');
   let cart = [];
 
-  function renderProducts(){document.getElementById('addProductBtn').addEventListener('click', ()=>{
-  const name = document.getElementById('newName').value;
-  const price = parseFloat(document.getElementById('newPrice').value);
-  const img = document.getElementById('newImg').value;
+  
 
   if(!name || !price || !img){
     alert("Please fill all fields.");
