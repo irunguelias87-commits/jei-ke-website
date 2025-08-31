@@ -1,28 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+nav {
+  background: #ffcc00; /* Tab bar background */
   text-align: center;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
+  border-radius: 5px; /* optional rounded corners */
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 15px; /* make all tabs same height */
+  color: #003366;     /* text color */
+  text-decoration: none;
+  font-weight: bold;
+  background: #ffcc00; /* same as nav bar to start */
+  border-radius: 5px;  /* same rounded corners */
 }
 
-h1 {
-  font-size: 2.5em;
-}
-
-p {
-  color: #555;
-  font-size: 1.2em;
-}
-
-img {
-  max-width: 200px;
-  border-radius: 20px;
-  margin-top: 20px;
+nav a:hover {
+  background: #003366; /* hover color */
+  color: #fff;         /* hover text color */
+  transition: 0.3s;
 }
