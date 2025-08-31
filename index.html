@@ -1,55 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Light Rays Market</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #222; color: #fff; padding: 15px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; }
-    footer { background: #222; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #555;
+    }
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Light Rays Market</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-      <a href="#market">Market</a>
-    </nav>
+    <p>Buy • Sell • Connect</p>
   </header>
 
-  <section id="home">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#market">Buy & Sell</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="home">
     <h2>Welcome</h2>
-    <p>Buy and sell easily. Open to everyone.</p>
-  </section>
+    <p>Welcome to Light Rays Market. A free and open place where anyone can post goods, services, or buy from others.</p>
+  </div>
 
-  <section id="about">
+  <div class="container" id="about">
     <h2>About Us</h2>
-    <p>Light Rays Media official platform. Connecting sellers and buyers.</p>
-  </section>
+    <p>Light Rays Media created this platform to connect people through trade and services. Safe, open, and easy to use.</p>
+  </div>
 
-  <section id="contact">
+  <div class="container" id="market">
+    <h2>Post Your Item</h2>
+    <form>
+      <input type="text" placeholder="Item Name" required>
+      <textarea placeholder="Item Description" rows="4" required></textarea>
+      <input type="text" placeholder="Price (Ksh)" required>
+      <input type="text" placeholder="Your Contact (Phone/WhatsApp)" required>
+      <button type="submit">Post Item</button>
+    </form>
+  </div>
+
+  <div class="container" id="contact">
     <h2>Contact</h2>
-    <p>Phone: 0768814953</p>
-    <p>WhatsApp: 0768814953</p>
-    <p>Facebook: Jei Ke</p>
-  </section>
-
-  <section id="market">
-    <h2>Market</h2>
-    <p>Post your goods and services here (feature coming soon).</p>
-  </section>
+    <p>📞 Phone: 0768814953</p>
+    <p>📱 WhatsApp: 0768814953</p>
+    <p>📘 Facebook: Jei Ke</p>
+    <p>Powered by Light Rays Media</p>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Light Rays Media</p>
+    <p>&copy; 2025 Light Rays Market | All Rights Reserved</p>
   </footer>
 
-  <!-- Firebase setup -->
+  <!-- Firebase SDK -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 
@@ -57,19 +127,16 @@
       apiKey: "AIzaSyA4Q2OPDlKARsl3kIa_b3kyd8g0AU6KvIs",
       authDomain: "light-rays-market.firebaseapp.com",
       projectId: "light-rays-market",
-      storageBucket: "light-rays-market.firebasestorage.app",
+      storageBucket: "light-rays-market.appspot.com",
       messagingSenderId: "768911110865",
       appId: "1:768911110865:web:65213e7abb2e094e55cbf0"
     };
 
     const app = initializeApp(firebaseConfig);
   </script>
-
 </body>
 </html>
 
-  </script>
-</body>
-</html>
+
 
 
