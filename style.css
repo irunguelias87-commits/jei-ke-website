@@ -37,4 +37,9 @@ h1,h2 { color:#0077b6; text-align:center; }
 
 footer { background:#0077b6; color:#fff; text-align:center; padding:15px; margin-top:20px; }
 footer a { color:#ffcc00; text-decoration:none; }
-footer a:hover { text-decoration:underline; }
+footer a:hover { text-decoration:underline; }#map { border:2px solid #0077b6; border-radius:10px; margin-top:15px; }
+#cart ul { list-style:none; padding:0; }
+#cart li { background:#f4f4f4; margin:5px 0; padding:8px; border-radius:5px; display:flex; justify-content:space-between; align-items:center; }
+#cart button { background:#ff3333; color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+#cart button:hover { background:#cc0000; }
+
