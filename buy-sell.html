@@ -21,7 +21,14 @@
 <main>
   <h2>Buy & Sell Products</h2>
 
-  <div class="featured-grid" id="product-list"></div>
+  <div class="featured-grid" id="product-list"></div><h2>Admin: Add New Product</h2>
+<div id="admin-form">
+  <input type="text" id="newName" placeholder="Product Name">
+  <input type="number" id="newPrice" placeholder="Price">
+  <input type="text" id="newImg" placeholder="Image URL">
+  <button id="addProductBtn" class="btn">Add Product</button>
+</div>
+
 
   <h2>Your Cart</h2>
   <div id="cart">
@@ -51,7 +58,27 @@
   const cartDiv = document.getElementById('cart');
   let cart = [];
 
-  function renderProducts(){
+  function renderProducts(){document.getElementById('addProductBtn').addEventListener('click', ()=>{
+  const name = document.getElementById('newName').value;
+  const price = parseFloat(document.getElementById('newPrice').value);
+  const img = document.getElementById('newImg').value;
+
+  if(!name || !price || !img){
+    alert("Please fill all fields.");
+    return;
+  }
+
+  products.push({name, price, img});
+  renderProducts();
+
+  // clear form
+  document.getElementById('newName').value = '';
+  document.getElementById('newPrice').value = '';
+  document.getElementById('newImg').value = '';
+
+  alert("Product added successfully!");
+});
+
     productList.innerHTML = '';
     products.forEach((p, index)=>{
       const card = document.createElement('div');
