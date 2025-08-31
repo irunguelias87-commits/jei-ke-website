@@ -129,3 +129,14 @@ nav a:hover, nav a.active { background:#0077b6; }
 }
 
 #chat-send:hover { background: #005f86; }
+.badge {
+  position: absolute;
+  background: #ff3333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+}
+.card { position: relative; } /* Ensure badge is correctly positioned */
