@@ -42,4 +42,8 @@ footer a:hover { text-decoration:underline; }#map { border:2px solid #0077b6; bo
 #cart li { background:#f4f4f4; margin:5px 0; padding:8px; border-radius:5px; display:flex; justify-content:space-between; align-items:center; }
 #cart button { background:#ff3333; color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
 #cart button:hover { background:#cc0000; }
+#admin-form { margin-top:20px; display:flex; flex-wrap:wrap; gap:10px; }
+#admin-form input { padding:8px; border-radius:5px; border:1px solid #ccc; flex:1; min-width:150px; }
+#admin-form button { background:#0077b6; color:#fff; padding:8px 12px; border-radius:5px; border:none; cursor:pointer; }
+#admin-form button:hover { background:#005f86; }
 
