@@ -63,6 +63,12 @@
     {name: 'Sport Shoes', price: 3500, img:'https://via.placeholder.com/400x300.png?text=Shoes'},
     {name: 'Graphic Design Service', price: 2000, img:'https://via.placeholder.com/400x300.png?text=Graphic+Design'}
   ];
+const products = [
+  { name:'Samsung Galaxy A32', price:18000, img:'images/galaxy.jpg', category:'electronics', tag:'Hot' },
+  { name:'Laptop Core i5', price:45000, img:'images/laptop.jpg', category:'electronics', tag:'New' },
+  { name:'Sport Shoes', price:3500, img:'images/shoes.jpg', category:'fashion', tag:'Discount' },
+  { name:'Graphic Design Service', price:2000, img:'images/design.jpg', category:'services', tag:'' }
+];
 
   const productList = document.getElementById('product-list');
   const cartDiv = document.getElementById('cart');
@@ -134,6 +140,7 @@ function renderProducts(list = products){
     cart.splice(index,1);
     renderCart();
   }
+<div class="badge">${p.tag ? p.tag : ''}</div>
 
   document.getElementById('checkoutBtn').addEventListener('click', ()=>{
     if(cart.length===0){
