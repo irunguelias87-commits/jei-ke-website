@@ -3,74 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light Rays Market</title>
+  <title>Light Rays Market | Home</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #222;
-      margin-bottom: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    input, textarea, button {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: #222;
-      color: #fff;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #555;
-    }
-    footer {
-      text-align: center;
-      background: #222;
-      color: #fff;
-      padding: 10px;
-      margin-top: 20px;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin:0; background:#f1f5f9; color:#333; }
+    header { background:#003366; color:#fff; padding:30px; text-align:center; }
+    header h1 { margin:0; font-size:32px; }
+    header p { margin:5px 0 0; font-size:16px; }
+    nav { background:#ffcc00; display:flex; justify-content:center; gap:25px; padding:12px; }
+    nav a { color:#003366; text-decoration:none; font-weight:bold; font-size:16px; }
+    nav a:hover { text-decoration:underline; }
+    .container { width:90%; max-width:1100px; margin:20px auto; }
+    h2 { color:#003366; margin-top:30px; font-size:22px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:15px; }
+    .card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin:0; font-size:18px; color:#003366; }
+    .card p { margin:5px 0; }
   </style>
 </head>
 <body>
@@ -80,62 +28,54 @@
   </header>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#market">Buy & Sell</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="market.html">Buy & Sell</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="container" id="home">
-    <h2>Welcome</h2>
-    <p>Welcome to Light Rays Market. A free and open place where anyone can post goods, services, or buy from others.</p>
+  <div class="container">
+    <h2>Featured Goods</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Smartphone</h3>
+        <p>Samsung Galaxy A32</p>
+        <p><b>Price:</b> Ksh 18,000</p>
+      </div>
+      <div class="card">
+        <h3>Fresh Avocados</h3>
+        <p>Farm produce per kg</p>
+        <p><b>Price:</b> Ksh 200</p>
+      </div>
+      <div class="card">
+        <h3>Men’s Jacket</h3>
+        <p>Brand New</p>
+        <p><b>Price:</b> Ksh 2,500</p>
+      </div>
+    </div>
+
+    <h2>Featured Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Plumbing</h3>
+        <p>Reliable home & office plumbing</p>
+        <p><b>Contact:</b> 0712 345 678</p>
+      </div>
+      <div class="card">
+        <h3>Photography</h3>
+        <p>Events, weddings, and portraits</p>
+        <p><b>Contact:</b> 0722 987 654</p>
+      </div>
+      <div class="card">
+        <h3>Car Hire</h3>
+        <p>Affordable vehicles available</p>
+        <p><b>Contact:</b> 0733 111 222</p>
+      </div>
+    </div>
   </div>
-
-  <div class="container" id="about">
-    <h2>About Us</h2>
-    <p>Light Rays Media created this platform to connect people through trade and services. Safe, open, and easy to use.</p>
-  </div>
-
-  <div class="container" id="market">
-    <h2>Post Your Item</h2>
-    <form>
-      <input type="text" placeholder="Item Name" required>
-      <textarea placeholder="Item Description" rows="4" required></textarea>
-      <input type="text" placeholder="Price (Ksh)" required>
-      <input type="text" placeholder="Your Contact (Phone/WhatsApp)" required>
-      <button type="submit">Post Item</button>
-    </form>
-  </div>
-
-  <div class="container" id="contact">
-    <h2>Contact</h2>
-    <p>📞 Phone: 0768814953</p>
-    <p>📱 WhatsApp: 0768814953</p>
-    <p>📘 Facebook: Jei Ke</p>
-    <p>Powered by Light Rays Media</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Light Rays Market | All Rights Reserved</p>
-  </footer>
-
-  <!-- Firebase SDK -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyA4Q2OPDlKARsl3kIa_b3kyd8g0AU6KvIs",
-      authDomain: "light-rays-market.firebaseapp.com",
-      projectId: "light-rays-market",
-      storageBucket: "light-rays-market.appspot.com",
-      messagingSenderId: "768911110865",
-      appId: "1:768911110865:web:65213e7abb2e094e55cbf0"
-    };
-
-    const app = initializeApp(firebaseConfig);
-  </script>
 </body>
 </html>
+
 
 
 
