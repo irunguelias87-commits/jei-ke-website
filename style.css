@@ -1,23 +1,28 @@
 nav {
-  background: #ffcc00; /* Tab bar background */
+  background: #ffcc00;   /* Tab bar background */
   text-align: center;
   padding: 10px;
-  border-radius: 5px; /* optional rounded corners */
+  border-radius: 5px;
 }
 
 nav a {
   display: inline-block;
   margin: 0 10px;
-  padding: 10px 15px; /* make all tabs same height */
-  color: #003366;     /* text color */
+  padding: 10px 15px;
+  color: #003366;         /* Text color */
   text-decoration: none;
   font-weight: bold;
-  background: #ffcc00; /* same as nav bar to start */
-  border-radius: 5px;  /* same rounded corners */
+  background: #ffcc00;    /* Same as nav bar */
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  background: #003366; /* hover color */
-  color: #fff;         /* hover text color */
-  transition: 0.3s;
+  background: #003366;    /* Hover color */
+  color: #fff;            /* Hover text color */
+}
+
+nav a.active {
+  background: #003366;    /* Active tab color */
+  color: #fff;            /* Active text color */
 }
