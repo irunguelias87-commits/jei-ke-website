@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact Jei Ke</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Light Rays Market</title>
+  <style>
+    body { font-family:'Segoe UI', sans-serif; margin:0; background:#f9fafb; }
+    header { background:#003366; color:#fff; padding:30px; text-align:center; }
+    nav { background:#ffcc00; display:flex; justify-content:center; gap:25px; padding:12px; }
+    nav a { color:#003366; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:700px; margin:30px auto; background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+    h2 { color:#003366; }
+    label { font-weight:bold; margin-top:10px; display:block; }
+    input, textarea { width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:8px; }
+    button { background:#003366; color:#fff; padding:12px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; }
+    button:hover { background:#002244; }
+  </style>
 </head>
 <body>
-  <h1>Contact Jei Ke</h1>
-  <p>Fill the form below to reach us:</p>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="market.html">Buy & Sell</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <form>
-    <label>Name:</label><br>
-    <input type="text" name="name"><br><br>
+  <div class="container">
+    <h2>We’d Love to Hear From You</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
 
-    <label>Email:</label><br>
-    <input type="email" name="email"><br><br>
+      <label for="msg">Message</label>
+      <textarea id="msg" rows="5" placeholder="Write your message..." required></textarea>
 
-    <label>Message:</label><br>
-    <textarea name="message" rows="5" cols="30"></textarea><br><br>
-
-    <input type="submit" value="Send">
-  </form>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
 
   <p><a href="index.html">Back to Home</a></p>
 </body>
 </html>
+
