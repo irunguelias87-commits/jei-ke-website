@@ -21,6 +21,12 @@
 <main>
   <h2>Buy & Sell Products</h2>
 
+<div id="filters">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('electronics')">Electronics</button>
+  <button onclick="filterProducts('fashion')">Fashion</button>
+  <button onclick="filterProducts('services')">Services</button>
+</div>
   <div class="featured-grid" id="product-list"></div><h2>Admin: Add New Product</h2>
 <div id="admin-form">
   <input type="text" id="newName" placeholder="Product Name">
@@ -46,7 +52,11 @@
 </footer>
 
 <script>
-  // Product list
+  // Product listfunction filterProducts(category){
+  const filtered = category==='all' ? products : products.filter(p=>p.category===category);
+  renderProducts(filtered);
+}
+
   const products = [
     {name: 'Samsung Galaxy A32', price: 18000, img:'https://via.placeholder.com/400x300.png?text=Smartphone'},
     {name: 'Laptop Core i5', price: 45000, img:'https://via.placeholder.com/400x300.png?text=Laptop'},
@@ -70,6 +80,12 @@
 
   products.push({name, price, img});
   renderProducts();
+function renderProducts(list = products){
+  productList.innerHTML = '';
+  list.forEach((p,index)=>{
+    // same card code as before
+  });
+}
 
   // clear form
   document.getElementById('newName').value = '';
@@ -144,7 +160,8 @@
     const locations = [
       {lat: -1.286389, lng: 36.817223, name: "Jei Ke Shop 1"},
       {lat: -1.292066, lng: 36.821945, name: "Jei Ke Shop 2"}
-    ];
+    ];<a href="https://wa.me/254768814953" class="whatsapp-float" target="_blank">Chat with us</a>
+
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 12,
       center: locations[0],
