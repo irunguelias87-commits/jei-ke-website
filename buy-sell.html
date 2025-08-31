@@ -90,11 +90,28 @@
     cart.splice(index,1);
     renderCart();
   }
+document.getElementById('checkoutBtn').addEventListener('click', ()=>{
+  if(cart.length===0){
+    alert('Cart is empty!');
+    return;
+  }
 
-  document.getElementById('checkoutBtn').addEventListener('click', ()=>{
-    if(cart.length===0){
-      alert('Cart is empty!');
-      return;
+  let total = cart.reduce((sum,item)=>sum+item.price,0);
+
+  let receipt = 'Receipt:\n\n';
+  cart.forEach(item=>{
+    receipt += `${item.name} - Ksh ${item.price}\n`;
+  });
+  receipt += `\nTotal: Ksh ${total}\n\nProceed to pay via Mpesa.`;
+
+  // Simulate Mpesa payment
+  if(confirm(receipt + "\n\nClick OK to simulate Mpesa payment")) {
+    alert("Mpesa payment request sent to 0768814953. Thank you for your purchase!");
+    cart = []; // clear cart after payment
+    renderCart(); // refresh cart display
+  }
+});
+
     }
     let total = cart.reduce((sum,item)=>sum+item.price,0);
     let receipt = 'Receipt:\n\n';
