@@ -10,7 +10,23 @@
     <p>Smart online marketing that grows your brand.</p>
   </header>
 
-  <section>
+  <section>// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA4Q2OPDlKARsl3kIa_b3kyd8g0AU6KvIs",
+  authDomain: "light-rays-market.firebaseapp.com",
+  projectId: "light-rays-market",
+  storageBucket: "light-rays-market.firebasestorage.app",
+  messagingSenderId: "768911110865",
+  appId: "1:768911110865:web:65213e7abb2e094e55cbf0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
     <h2>About Us</h2>
     <p>We specialize in creative marketing solutions that help your business stand out online.</p>
   </section>
@@ -80,6 +96,7 @@
     <button>Chat with Us</button>
   </a>
 </section>
+
 
 
 
